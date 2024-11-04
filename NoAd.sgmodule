@@ -47,8 +47,10 @@
 ^http:\/\/s3plus\.meituan\.net\/.*\/brandcpt-vedio\/.*\?time url reject
 
 # ============ W ============= #
+# 微博
+DOMAIN-SUFFIX,biz.weibo.com,REJECT,extended-matching,pre-matching
 # 网易严选
-https://support.you.163.com/appversync/check.do url reject
+^https://support.you.163.com/appversync/check.do url reject
 ^https?:\/\/support\.you\.163\.com\/xhr\/boot\/getBootMedia\.json url reject
 ^https?:\/\/m\.you\.163\.com\/activity\/popWindow url reject
 ^https?:\/\/yanxuan\.nosdn\.127\.net\/.*\.mp4 url reject
