@@ -49,6 +49,7 @@
 # ============ W ============= #
 # 微博
 DOMAIN-SUFFIX,biz.weibo.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,baichuan-sdk.alicdn.com,REJECT,extended-matching
 # 网易严选
 ^https://support.you.163.com/appversync/check.do url reject
 ^https?:\/\/support\.you\.163\.com\/xhr\/boot\/getBootMedia\.json url reject
