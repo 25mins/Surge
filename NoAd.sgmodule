@@ -4,6 +4,11 @@
 #!author = 25mins
 #!date = 2024-11-10
 # 由个人维护，0团队
+[Rule]
+# === W === #
+# 微博
+DOMAIN-SUFFIX,biz.weibo.com,REJECT,extended-matching,pre-matching
+DOMAIN-SUFFIX,baichuan-sdk.alicdn.com,REJECT,extended-matching
 [URL Rewrite]
 # ============= D ============ #
 # 豆瓣
@@ -47,9 +52,6 @@
 ^http:\/\/s3plus\.meituan\.net\/.*\/brandcpt-vedio\/.*\?time url reject
 
 # ============ W ============= #
-# 微博
-DOMAIN-SUFFIX,biz.weibo.com,REJECT,extended-matching,pre-matching
-DOMAIN-SUFFIX,baichuan-sdk.alicdn.com,REJECT,extended-matching
 # 网易严选
 ^https://support.you.163.com/appversync/check.do url reject
 ^https?:\/\/support\.you\.163\.com\/xhr\/boot\/getBootMedia\.json url reject
