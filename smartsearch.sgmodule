@@ -12,10 +12,10 @@
 
 [Url Rewrite]
 # g -> Google (/s 主搜索，优先)
-^https:\/\/m\.baidu\.com\/s\?.*word=g(%20|\+)([^&]+).* https://www.google.com/search?q=$2 302
+^https://m\.baidu\.com/s\?.*word=g(%20|\+)([^&]+).* https://www.google.com/search?q=$2 302
 
 # g -> Google (/su 补全，备用)
-^https:\/\/m\.baidu\.com\/su\?.*wd=g(%20|\+)([^&]+).* https://www.google.com/search?q=$2 302
+^https://m\.baidu\.com/su\?.*wd=g(%20|\+)([^&]+).* https://www.google.com/search?q=$2 302
 
 # b -> Bing (/s)
 ^https:\/\/m\.baidu\.com\/s\?.*word=b(%20|\+)([^&]+).* https://www.bing.com/search?q=$2 302
@@ -57,4 +57,4 @@
 # • /su：这是搜索建议端点（suggestion endpoint），用于提供输入框中的自动补全建议（autocomplete 或 suggest）。例如，https://suggestion.baidu.com/su?wd=关键词 会返回 JSON 格式的热门相关词建议，帮助用户快速完善查询。
 
 [MITM]
-hostname = %APPEND% baidu.com,m.baidu.com
+hostname = baidu.com,m.baidu.com
