@@ -11,41 +11,42 @@
 # Reddit：基本搜索 URL，支持子版块但这里是全局。
 
 [Url Rewrite]
-# g -> Google (/s 主搜索，优先)
-^https:\/\/m\.baidu\.com\/s\?.*word=g(%20|\+)([^&]+).* https://www.google.com/search?q=$2 302
+[URL Rewrite]
+# g -> Google (/s 主搜索，word=，优先)
+^https://m\.baidu\.com/s\?.*word=g(%20|\+)([^&]+).* https://www.google.com/search?q=$2 302
 
-# g -> Google (/su 补全，备用)
-^https:\/\/m\.baidu\.com\/su\?.*wd=g(%20|\+)([^&]+).* https://www.google.com/search?q=$2 302
+# g -> Google (/su 补全，wd=)
+^https://m\.baidu\.com/su\?.*wd=g(%20|\+)([^&]+).* https://www.google.com/search?q=$2 302
 
 # b -> Bing (/s)
-^https:\/\/m\.baidu\.com\/s\?.*word=b(%20|\+)([^&]+).* https://www.bing.com/search?q=$2 302
+^https://m\.baidu\.com/s\?.*word=b(%20|\+)([^&]+).* https://www.bing.com/search?q=$2 302
 
 # b -> Bing (/su)
-^https:\/\/m\.baidu\.com\/su\?.*wd=b(%20|\+)([^&]+).* https://www.bing.com/search?q=$2 302
+^https://m\.baidu\.com/su\?.*wd=b(%20|\+)([^&]+).* https://www.bing.com/search?q=$2 302
 
 # ddg -> DuckDuckGo (/s)
-^https:\/\/m\.baidu\.com\/s\?.*word=ddg(%20|\+)([^&]+).* https://duckduckgo.com/?q=$2 302
+^https://m\.baidu\.com/s\?.*word=ddg(%20|\+)([^&]+).* https://duckduckgo.com/?q=$2 302
 
 # ddg -> DuckDuckGo (/su)
-^https:\/\/m\.baidu\.com\/su\?.*wd=ddg(%20|\+)([^&]+).* https://duckduckgo.com/?q=$2 302
+^https://m\.baidu\.com/su\?.*wd=ddg(%20|\+)([^&]+).* https://duckduckgo.com/?q=$2 302
 
 # gh -> GitHub (/s)
-^https:\/\/m\.baidu\.com\/s\?.*word=gh(%20|\+)([^&]+).* https://github.com/search?q=$2&type=repositories 302
+^https://m\.baidu\.com/s\?.*word=gh(%20|\+)([^&]+).* https://github.com/search?q=$2&type=repositories 302
 
 # gh -> GitHub (/su)
-^https:\/\/m\.baidu\.com\/su\?.*wd=gh(%20|\+)([^&]+).* https://github.com/search?q=$2&type=repositories 302
+^https://m\.baidu\.com/su\?.*wd=gh(%20|\+)([^&]+).* https://github.com/search?q=$2&type=repositories 302
 
 # wk -> Wikipedia (/s)
-^https:\/\/m\.baidu\.com\/s\?.*word=wk(%20|\+)([^&]+).* https://zh.wikipedia.org/w/index.php?search=$2 302
+^https://m\.baidu\.com/s\?.*word=wk(%20|\+)([^&]+).* https://zh.wikipedia.org/w/index.php?search=$2 302
 
 # wk -> Wikipedia (/su)
-^https:\/\/m\.baidu\.com\/su\?.*wd=wk(%20|\+)([^&]+).* https://zh.wikipedia.org/w/index.php?search=$2 302
+^https://m\.baidu\.com/su\?.*wd=wk(%20|\+)([^&]+).* https://zh.wikipedia.org/w/index.php?search=$2 302
 
 # r -> Reddit (/s)
-^https:\/\/m\.baidu\.com\/s\?.*word=r(%20|\+)([^&]+).* https://www.reddit.com/search/?q=$2 302
+^https://m\.baidu\.com/s\?.*word=r(%20|\+)([^&]+).* https://www.reddit.com/search/?q=$2 302
 
 # r -> Reddit (/su)
-^https:\/\/m\.baidu\.com\/su\?.*wd=r(%20|\+)([^&]+).* https://www.reddit.com/search/?q=$2 302
+^https://m\.baidu\.com/su\?.*wd=r(%20|\+)([^&]+).* https://www.reddit.com/search/?q=$2 302
 
 #重定向示例
 #^https:\/\/www\.baidu\.com 307 https://www.google.com/
